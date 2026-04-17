@@ -85,9 +85,12 @@ body {
     text-align: center;
     color: white;
     padding: 0 20px;
-    background: red !important;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+                url('src/img/espiral-nuevo.gif') center/cover no-repeat fixed;
+    animation: fadeIn 1s ease-out;
+    position: relative;
+    z-index: 1;
 }
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
