@@ -86,7 +86,7 @@ body {
     color: white;
     padding: 0 20px;
     background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
-                url('src/img/espiral.gif') center/cover no-repeat fixed;
+                url('src/img/espiral.gif?v=2') center/cover no-repeat fixed;
     animation: fadeIn 1s ease-out;
     position: relative;
     z-index: 1;
