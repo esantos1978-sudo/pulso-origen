@@ -17,6 +17,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
     color: var(--color-texto);
     font-family: var(--fuente-cuerpo);
     line-height: 1.8;
+    overflow-x: hidden;
 }
 
 /* 2. NAVEGACIÓN */
@@ -74,7 +76,7 @@ body {
     color: #333;
 }
 
-/* 3. HERO SECTION CON ESPIRAL */
+/* 3. HERO SECTION */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -83,7 +85,7 @@ body {
     text-align: center;
     color: white;
     padding: 0 20px;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
                 url('src/img/espiral.gif') center/cover no-repeat fixed;
     animation: fadeIn 1s ease-out;
     position: relative;
@@ -98,6 +100,18 @@ body {
 .hero-content {
     max-width: 700px;
     margin: 0 auto;
+    animation: fadeUp 1.2s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero h1 {
@@ -142,7 +156,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.8rem;
-    border: none;
+    border: 1px solid #000;
     cursor: pointer;
     transition: 0.3s;
     display: inline-block;
@@ -164,15 +178,15 @@ body {
 
 .boton-negro:hover, .boton-contacto:hover {
     background: #333;
+    border-color: #333;
 }
 
 .boton-minimal:hover {
     background: #fff;
     color: #000;
-    border-color: #fff;
 }
 
-/* 5. SECCIONES */
+/* 5. SECCIONES GENERALES */
 section {
     padding: 120px 20px;
     max-width: 1100px;
@@ -180,14 +194,15 @@ section {
     text-align: center;
 }
 
-.seccion-clara {
-    background-color: var(--color-fondo-alt);
-}
-
 h2 {
     font-family: var(--fuente-titulos);
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    margin-bottom: 40px;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    margin-bottom: 50px;
+}
+
+.seccion-clara {
+    background-color: var(--color-fondo-alt);
+    max-width: 100%;
 }
 
 .lista-dolores {
@@ -198,110 +213,109 @@ h2 {
 }
 
 .lista-dolores li {
-    padding: 15px 0 15px 40px;
+    padding: 18px 0 18px 45px;
     position: relative;
     border-bottom: 1px solid #e0ddd7;
+    font-size: 1.1rem;
 }
 
 .lista-dolores li::before {
     content: "·";
     position: absolute;
     left: 10px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #999;
+    top: 5px;
 }
 
 .destacado {
     font-family: var(--fuente-titulos);
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
     font-style: italic;
-    margin-top: 40px;
+    margin-top: 50px;
     color: #000;
 }
 
 .texto-seo {
-    max-width: 800px;
+    max-width: 850px;
     margin: 40px auto;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
-/* 6. PILARES */
-.pilares {
+/* 6. CARDS */
+.galeria-abstracta {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
-.pilar {
+.concepto-item {
     background: #fff;
-    padding: 40px 20px;
+    padding: 60px 40px;
     border: 1px solid #f0f0f0;
-    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    transition: 0.3s ease;
 }
 
-.pilar:hover {
+.concepto-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-sm);
+}
+
+.concepto-item h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* 7. FRANJA ATMÓSFERA */
+.atmo-franja {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2000') center/cover no-repeat fixed;
+}
+
+/* 8. PROCESO (OSCURO) */
+.seccion-oscura {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url('src/img/manos-conexion.jpg') center/cover no-repeat fixed;
+    color: #fff;
+    max-width: 100%;
+}
+
+.pilares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
 }
 
 .numero {
     display: block;
     font-family: var(--fuente-titulos);
-    font-size: 2.5rem;
-    opacity: 0.2;
+    font-size: 3.5rem;
+    opacity: 0.3;
     margin-bottom: 10px;
 }
 
-/* 7. FRANJA ATMÓSFERA */
-.atmo-franja {
-    height: 50vh;
-    background: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2000') center/cover no-repeat fixed;
-}
-
-/* 8. CARDS */
-.galeria-abstracta {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.concepto-item {
-    background: #fff;
-    padding: 50px 30px;
-    border: 1px solid #f0f0f0;
-    text-align: left;
-    transition: 0.4s;
-}
-
-.concepto-item:hover {
-    transform: translateY(-5px);
-    border-color: #000;
-}
-
-.concepto-item h3 {
-    font-family: var(--fuente-titulos);
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-}
-
-/* 9. CTA */
-#cta-final h3 {
-    font-family: var(--fuente-titulos);
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    margin-bottom: 30px;
+/* 9. CTA FINAL */
+.seccion-expansion {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url('src/img/expansion.gif') center/cover no-repeat;
+    color: #fff;
+    max-width: 100%;
 }
 
 .microcopy {
-    margin-top: 20px;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    letter-spacing: 1px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    font-size: 0.8rem;
-    opacity: 0.6;
-    letter-spacing: 1px;
+    gap: 8px;
 }
 
 /* 10. FORMULARIO */
@@ -309,18 +323,11 @@ h2 {
     background-color: var(--color-fondo-alt);
 }
 
-.formulario-seccion label {
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-    font-size: 0.85rem;
-    font-weight: bold;
-}
-
 .formulario-seccion input,
 .formulario-seccion textarea {
     width: 100%;
-    padding: 18px;
+    max-width: 600px;
+    padding: 20px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     font-family: var(--fuente-cuerpo);
@@ -335,70 +342,52 @@ h2 {
 
 .feedback-envio {
     display: none;
-    padding: 40px;
-    background: var(--color-fondo-alt);
-    margin-top: 20px;
-    border: 1px solid #ddd;
+    padding: 50px;
+    background: #fff;
+    border: 1px solid #eee;
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.feedback-envio h3 {
-    font-family: var(--fuente-titulos);
-    margin-bottom: 10px;
-}
-
-/* 11. FOOTER */
+/* 11. FOOTER Y REDES SOCIALES */
 footer {
+    padding: 80px 20px;
     text-align: center;
-    padding: 60px 20px 40px;
-    background: #000;
-    color: #fff;
+    border-top: 1px solid #eee;
+    background: var(--color-fondo);
 }
 
-.footer-logo {
-    font-family: var(--fuente-titulos);
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
-
-footer p {
-    opacity: 0.6;
-    font-size: 0.8rem;
-}
-
-/* 12. REDES SOCIALES */
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px 0 20px;
 }
 
 .social-icons a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    color: #fff;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
+    color: #666;
+    font-size: 1.4rem;
+    transition: 0.3s;
     text-decoration: none;
 }
 
 .social-icons a:hover {
-    background: #fff;
     color: #000;
     transform: translateY(-3px);
 }
 
-/* 13. BLOG HEADER */
+.copyright {
+    font-size: 0.7rem;
+    opacity: 0.5;
+    margin-top: 20px;
+}
+
+/* 12. BLOG HEADER */
 .blog-header {
     min-height: 50vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
                 url('https://images.unsplash.com/photo-1441974231531-c622288db1a2?q=80&w=2000') center/cover no-repeat;
     display: flex;
     flex-direction: column;
@@ -415,7 +404,7 @@ footer p {
     margin-bottom: 10px;
 }
 
-/* 14. BLOG GRID */
+/* 13. BLOG GRID */
 .blog-grid-section {
     padding: 80px 5%;
     max-width: 1200px;
@@ -477,7 +466,7 @@ footer p {
     margin-left: 5px;
 }
 
-/* 15. ARTÍCULO COMPLETO */
+/* 14. ARTÍCULO COMPLETO */
 .articulo-completo {
     padding: 60px 5%;
     max-width: 900px;
@@ -540,12 +529,8 @@ footer p {
     border-top: 1px solid #eee;
 }
 
-/* 16. RESPONSIVE */
+/* 15. RESPONSIVE */
 @media (max-width: 768px) {
-    .menu {
-        padding: 15px 5%;
-    }
-    
     .menu-toggle {
         display: block;
     }
@@ -563,7 +548,7 @@ footer p {
         border-bottom: 1px solid #eee;
         opacity: 0;
         transform: translateY(-10px);
-        transition: all 0.4s ease-in-out;
+        transition: 0.4s ease;
         pointer-events: none;
         display: flex;
     }
@@ -579,44 +564,54 @@ footer p {
         letter-spacing: 5px;
     }
     
-    .tagline {
-        font-size: 1.1rem;
-    }
-    
     .hero-buttons {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        margin: 0 auto;
+
+        .hero-buttons .boton-minimal,
+    .hero-buttons .boton-negro {
         width: 100%;
         max-width: 280px;
-    }
-    
-    .boton-negro, .boton-minimal, .boton-contacto {
-        padding: 14px 30px;
         text-align: center;
+        box-sizing: border-box;
     }
+}
     
     section {
         padding: 80px 20px;
     }
     
-    h2 {
-        font-size: 1.8rem;
-    }
-    
-    .destacado {
-        font-size: 1.1rem;
-    }
-    
-    .pilares {
-        grid-template-columns: 1fr;
-    }
-    
-    .galeria-abstracta {
-        grid-template-columns: 1fr;
-    }
-    
     .atmo-franja {
-        height: 30vh;
+        height: 40vh;
         background-attachment: scroll;
+    }
+    
+    .seccion-sobremi > div {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 30px !important;
+    }
+    
+    .seccion-sobremi h2,
+    .seccion-sobremi p,
+    .seccion-sobremi blockquote {
+        text-align: center !important;
+    }
+    
+    .seccion-sobremi blockquote {
+        border-left: none !important;
+        padding-left: 0 !important;
+    }
+    
+    .seccion-sobremi img {
+        width: 150px !important;
+        height: 150px !important;
+        margin: 0 auto !important;
     }
     
     .blog-grid {
@@ -634,24 +629,73 @@ footer p {
     }
     
     .social-icons {
-        gap: 15px;
-    }
-    
-    .social-icons a {
-        width: 40px;
-        height: 40px;
-        font-size: 1.1rem;
+        gap: 20px;
     }
 }
 
-/* 17. RESPONSIVE EXTRA PEQUEÑO */
 @media (max-width: 480px) {
     .logo-texto {
-        font-size: 0.9rem;
-        letter-spacing: 2px;
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+}
+/* ========== MEJORAS PARA EL FORMULARIO ========== */
+.formulario-seccion {
+    background-color: var(--color-fondo-alt);
+    text-align: center;
+}
+
+.formulario-seccion form {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.formulario-seccion input,
+.formulario-seccion textarea {
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    font-family: var(--fuente-cuerpo);
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.formulario-seccion input:focus,
+.formulario-seccion textarea:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.formulario-seccion button {
+    display: inline-block;
+    width: auto;
+    min-width: 250px;
+    margin-top: 10px;
+}
+
+.feedback-envio {
+    display: none;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #eee;
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Ajustes responsivos para el formulario */
+@media (max-width: 768px) {
+    .formulario-seccion input,
+    .formulario-seccion textarea {
+        padding: 14px;
     }
     
-    .hero-summary {
-        font-size: 0.9rem;
+    .formulario-seccion button {
+        width: 100%;
+        min-width: auto;
     }
 }
