@@ -1,0 +1,657 @@
+/* 1. VARIABLES Y BASE */
+:root {
+    --color-fondo: #ffffff;
+    --color-fondo-alt: #f8f7f5;
+    --color-primario: #000000;
+    --color-texto: #333333;
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-cuerpo: 'Lato', sans-serif;
+    --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.8;
+}
+
+/* 2. NAVEGACIÓN */
+.menu {
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+}
+
+.logo-texto {
+    font-family: var(--fuente-titulos);
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* 3. HERO SECTION CON ESPIRAL */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('src/img/espiral.gif') center/cover no-repeat fixed;
+    animation: fadeIn 1s ease-out;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero .tagline {
+    font-family: var(--fuente-titulos);
+    font-style: italic;
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+    margin-bottom: 25px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero .hero-summary {
+    max-width: 700px;
+    margin-bottom: 45px;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    opacity: 0.9;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+
+.hero .hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* 4. BOTONES */
+.boton-negro, .boton-contacto {
+    background: #000;
+    color: #fff;
+    padding: 18px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.boton-minimal {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 18px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+    background: transparent;
+    display: inline-block;
+}
+
+.boton-negro:hover, .boton-contacto:hover {
+    background: #333;
+}
+
+.boton-minimal:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+/* 5. SECCIONES */
+section {
+    padding: 120px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.seccion-clara {
+    background-color: var(--color-fondo-alt);
+}
+
+h2 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 40px;
+}
+
+.lista-dolores {
+    list-style: none;
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.lista-dolores li {
+    padding: 15px 0 15px 40px;
+    position: relative;
+    border-bottom: 1px solid #e0ddd7;
+}
+
+.lista-dolores li::before {
+    content: "·";
+    position: absolute;
+    left: 10px;
+    font-size: 2rem;
+    color: #999;
+}
+
+.destacado {
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-top: 40px;
+    color: #000;
+}
+
+.texto-seo {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+/* 6. PILARES */
+.pilares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pilar {
+    background: #fff;
+    padding: 40px 20px;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pilar:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-sm);
+}
+
+.numero {
+    display: block;
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    opacity: 0.2;
+    margin-bottom: 10px;
+}
+
+/* 7. FRANJA ATMÓSFERA */
+.atmo-franja {
+    height: 50vh;
+    background: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2000') center/cover no-repeat fixed;
+}
+
+/* 8. CARDS */
+.galeria-abstracta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.concepto-item {
+    background: #fff;
+    padding: 50px 30px;
+    border: 1px solid #f0f0f0;
+    text-align: left;
+    transition: 0.4s;
+}
+
+.concepto-item:hover {
+    transform: translateY(-5px);
+    border-color: #000;
+}
+
+.concepto-item h3 {
+    font-family: var(--fuente-titulos);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* 9. CTA */
+#cta-final h3 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 30px;
+}
+
+.microcopy {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+/* 10. FORMULARIO */
+.formulario-seccion {
+    background-color: var(--color-fondo-alt);
+}
+
+.formulario-seccion label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.formulario-seccion input,
+.formulario-seccion textarea {
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    font-family: var(--fuente-cuerpo);
+    transition: border-color 0.3s;
+}
+
+.formulario-seccion input:focus,
+.formulario-seccion textarea:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.feedback-envio {
+    display: none;
+    padding: 40px;
+    background: var(--color-fondo-alt);
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+.feedback-envio h3 {
+    font-family: var(--fuente-titulos);
+    margin-bottom: 10px;
+}
+
+/* 11. FOOTER */
+footer {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: #000;
+    color: #fff;
+}
+
+.footer-logo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+
+/* 12. REDES SOCIALES */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* 13. BLOG HEADER */
+.blog-header {
+    min-height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('https://images.unsplash.com/photo-1441974231531-c622288db1a2?q=80&w=2000') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.blog-header h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* 14. BLOG GRID */
+.blog-grid-section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.blog-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-sm);
+}
+
+.blog-fecha {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.blog-card h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.blog-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.leer-mas {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.leer-mas:hover {
+    color: #666;
+    margin-left: 5px;
+}
+
+/* 15. ARTÍCULO COMPLETO */
+.articulo-completo {
+    padding: 60px 5%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.articulo-contenedor {
+    background: #fff;
+}
+
+.articulo-completo h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+.articulo-imagen {
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+.articulo-texto {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.articulo-texto h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+    margin: 40px 0 20px;
+    text-align: left;
+}
+
+.articulo-texto p {
+    margin-bottom: 20px;
+}
+
+.articulo-cita {
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #8c9284;
+    padding: 30px;
+    margin: 30px 0;
+    border-left: 3px solid #000;
+    background: #f8f7f5;
+}
+
+.articulo-footer {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+/* 16. RESPONSIVE */
+@media (max-width: 768px) {
+    .menu {
+        padding: 15px 5%;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+        gap: 20px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.4s ease-in-out;
+        pointer-events: none;
+        display: flex;
+    }
+    
+    .nav-links.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+        letter-spacing: 5px;
+    }
+    
+    .tagline {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .boton-negro, .boton-minimal, .boton-contacto {
+        padding: 14px 30px;
+        text-align: center;
+    }
+    
+    section {
+        padding: 80px 20px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .destacado {
+        font-size: 1.1rem;
+    }
+    
+    .pilares {
+        grid-template-columns: 1fr;
+    }
+    
+    .galeria-abstracta {
+        grid-template-columns: 1fr;
+    }
+    
+    .atmo-franja {
+        height: 30vh;
+        background-attachment: scroll;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .articulo-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .articulo-cita {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+    
+    .social-icons {
+        gap: 15px;
+    }
+    
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+/* 17. RESPONSIVE EXTRA PEQUEÑO */
+@media (max-width: 480px) {
+    .logo-texto {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+    
+    .hero-summary {
+        font-size: 0.9rem;
+    }
+}

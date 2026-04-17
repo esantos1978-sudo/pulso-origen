@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artículos y reflexiones sobre acompañamiento terapéutico, transformación personal y bienestar integral.">
+    <title>Blog | Pulso.Origen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="menu">
+        <div class="logo-texto">PULSO <span>·</span> ORIGEN</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#que-es">Qué es</a></li>
+            <li><a href="index.html#proceso">El Proceso</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+        <button class="menu-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+    </nav>
+
+    <main>
+        <header class="blog-header">
+            <h1>Blog</h1>
+            <p class="tagline">Reflexiones y acompañamiento para tu proceso</p>
+        </header>
+
+        <section class="blog-grid-section">
+            <div class="blog-grid">
+                
+                <!-- ARTÍCULO 1 -->
+                <article class="blog-card">
+                    <span class="blog-fecha">15 abril, 2026</span>
+                    <h3>El arte de escuchar lo que no habla</h3>
+                    <p>Detener el ruido externo para conectar con esa voz interna que siempre sabe, pero que a menudo ignoramos...</p>
+                    <a href="articulo1.html" class="leer-mas">Seguir leyendo →</a>
+                </article>
+
+                <!-- ARTÍCULO 2 -->
+                <article class="blog-card">
+                    <span class="blog-fecha">2 abril, 2026</span>
+                    <h3>Patrones que se repiten: por qué vuelve lo mismo</h3>
+                    <p>La mente intenta resolver, pero el cuerpo y el alma guardan memorias más profundas. Una mirada sistémica a la repetición...</p>
+                    <a href="articulo2.html" class="leer-mas">Seguir leyendo →</a>
+                </article>
+
+                <!-- ARTÍCULO 3 -->
+                <article class="blog-card">
+                    <span class="blog-fecha">20 marzo, 2026</span>
+                    <h3>Volver al origen: el primer paso hacia la libertad</h3>
+                    <p>No se trata de empezar de cero, sino de recordar quién eras antes de que el mundo te dijera cómo debías ser...</p>
+                    <a href="articulo3.html" class="leer-mas">Seguir leyendo →</a>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">PULSO <span>·</span> ORIGEN</div>
+        <p>Transformación desde la raíz.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        }
+
+        const navLinksItems = document.querySelectorAll('.nav-links a');
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
