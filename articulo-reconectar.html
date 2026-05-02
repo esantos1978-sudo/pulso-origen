@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Una invitación a mirar hacia adentro, nombrar las heridas y reconectar con tu verdadera esencia. El dolor como parte del camino de transformación.">
+    <title>Reconectar con tu verdadera esencia | Blog Pulso.Origen</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+    <nav class="menu">
+        <div class="logo-texto">PULSO <span>·</span> ORIGEN</div>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#que-es">Qué es</a></li>
+            <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article class="articulo-completo">
+            <div class="articulo-contenedor">
+                <span class="blog-fecha">2 mayo, 2026</span>
+                <h1>Reconectar con tu verdadera esencia</h1>
+                
+                <div class="articulo-texto">
+                    <p>Hace poco me preguntaron: <strong>"¿Para qué voy a mirar hacia adentro, si lo que hay ahí duele?"</strong></p>
+                    
+                    <p>Bueno, déjame decirte que lo comprendo, que sé de lo que hablas y que la reacción humana más frecuente es negar, mirar hacia otro lado, o pretender que las cosas nunca sucedieron.</p>
+                    
+                    <p>Estas resistencias van profundizando la distancia entre lo que sientes y lo que al mismo tiempo vas tapando casi de manera automática, de la mano de tu atención desplazada hacia mil y un distractores externos que sirven para aliviar momentáneamente aquello que está oprimiendo.</p>
+                    
+                    <p>Sin embargo, <strong>una parte de ti sabe que es preciso frenar y hacerle un espacio a eso que necesita ser escuchado.</strong> Callada y pacientemente, ese algo sutil dentro de ti aguarda a por tu atención consciente.</p>
+                    
+                    <p>Cuando comienzas a mirar con franqueza las heridas que cargas en la mochila, cuando las nombras y les pones palabras, cuando revives emociones, vivencias y escenas que han dejado una huella profunda, solo ahí un hilo de alivio podrá sobrevenir.</p>
+                    
+                    <p>La tensión interna se va desinflando poco a poco, pues ya no la tienes acorralada y escondida pretendiendo que sea invisible o que nunca ha habitado dentro de ti.</p>
+                    
+                    <div class="articulo-cita">
+                        "Pulso.Origen es una invitación a que te permitas ampliar la mirada sobre ti, sobre tu historia, sobre la vida misma, desde un estado de apertura y compasión, sin juicio, sabiéndote acompañado."
+                    </div>
+                    
+                    <p>Ninguno de nosotros está exento de las experiencias de dolor, pues son ellas las que nos permiten crecer y volvernos seres más completos.</p>
+                </div>
+                
+                <div class="articulo-footer">
+                    <a href="blog.html" class="boton-minimal">← Volver al blog</a>
+                    <a href="index.html#contacto" class="boton-negro">Solicitar conversación</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="logo-texto">PULSO <span>·</span> ORIGEN</div>
+        <p>Acompañamiento terapéutico para volver a ti.</p>
+        
+        <div class="social-icons">
+            <a href="https://www.instagram.com/pulso.origen" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/34612345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:hola@pulsoorigen.com"><i class="far fa-envelope"></i></a>
+        </div>
+        
+        <div class="copyright">© 2025 Pulso Origen. Todos los derechos reservados.</div>
+    </footer>
+
+    <script>
+        // Menú hamburguesa
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+            
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('show');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
