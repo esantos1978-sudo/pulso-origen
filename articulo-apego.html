@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reflexión profunda sobre el apego: cómo nos atrapa, cómo se siente en el cuerpo y cómo podemos empezar a soltar para volver a ser libres.">
+    <title>Apego | Blog Pulso.Origen</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+    <nav class="menu">
+        <div class="logo-texto">PULSO <span>·</span> ORIGEN</div>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#que-es">Qué es</a></li>
+            <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article class="articulo-completo">
+            <div class="articulo-contenedor">
+                <span class="blog-fecha">2 mayo, 2026</span>
+                <h1>Apego</h1>
+                
+                <div class="articulo-texto">
+                    <p>Todos nos sentimos apegados a algo o a alguien en algún momento de nuestras vidas y todos entendemos de qué hablamos cuando nos referimos a este término. Definiciones hay y las encuentras apenas se lo preguntas al buscador o en libros de Psicología.</p>
+                    
+                    <p>Pero, <strong>¿te habías parado a reflexionar sobre lo que se experimenta a nivel emocional y físico cuando estás inmerso en un ámbito de apego?</strong> ¿Por qué no eres capaz de dar un paso al costado de eso que te comprime y que te limita?</p>
+                    
+                    <p>¿Estás en un vínculo sentimental que te ahoga y tensiona pero aun así no te imaginas vivir sin esa estructura? ¿Qué circunstancia o conflicto te deja vacío pero continuas repitiendo en bucle por costumbre o comodidad?</p>
+                    
+                    <p>Hay parámetros muy simples de observar, pero que presentan dificultades a la hora de crear cambios positivos que nos permitan salir de esas espirales dolorosas. <strong>Siempre detente en la sensación física y la resaca emocional que te queda al vivir eso que repites una y otra vez.</strong></p>
+                    
+                    <p>Puede ser una discusión con tu pareja, por ejemplo. Frena todo y repara en lo que estás sintiendo, en tus narrativas mentales, en lo que dijiste y en lo que te arrepientes de haber callado… ¿cómo vibra eso en tu cuerpo? ¿Qué descargas emocionales estás experimentando?</p>
+                    
+                    <p>Cuando una parte de ti ha reconocido que no es capaz de seguir actualizando los mismos escenarios y diálogos que te dañan, <strong>estás ante algo precioso</strong> pues se activó una señal de alarma interna y algo en ti susurra que es posible salir de ahí. Confía en ti, da crédito a tu voz interna, que puede ser un susurro tímido, pero que está hablándote desde las profundidades.</p>
+                    
+                    <div class="articulo-cita">
+                        "Quiero recordarte la siguiente paradoja: que en ti está la trampa, y más importante aún, que eres también la llave, el único código secreto que abre el cofre de tus verdades. La salida nunca fue hacia afuera."
+                    </div>
+                    
+                    <p>Cree más en ti, y en tu capacidad innata para deshacer los nudos que te están bloqueando.</p>
+                    
+                    <p>Cuando el bucle otra vez se presente ante ti, obsérvate, escúchate, sé sagaz contigo mismo, y pregúntate: <strong>¿esto me da libertad o me la está quitando? ¿Esto me hace sentir espacioso por dentro o me encoge y me hace sentir pequeño?</strong></p>
+                    
+                    <p>Pregúntate qué vínculo o circunstancia te mantiene estancado, pues las personas tendemos a normalizar cuestiones que no deberían ser normales.</p>
+                    
+                    <p>Avanzar, evolucionar y ser quienes vinimos a ser, requiere de una buena dosis de valentía y coraje. <strong>La vida está pasando muy deprisa, no te distraigas!</strong></p>
+                </div>
+                
+                <div class="articulo-footer">
+                    <a href="blog.html" class="boton-minimal">← Volver al blog</a>
+                    <a href="index.html#contacto" class="boton-negro">Solicitar conversación</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="logo-texto">PULSO <span>·</span> ORIGEN</div>
+        <p>Acompañamiento terapéutico para volver a ti.</p>
+        
+        <div class="social-icons">
+            <a href="https://www.instagram.com/pulso.origen" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/34612345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:hola@pulsoorigen.com"><i class="far fa-envelope"></i></a>
+        </div>
+        
+        <div class="copyright">© 2025 Pulso Origen. Todos los derechos reservados.</div>
+    </footer>
+
+    <script>
+        // Menú hamburguesa
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+            
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('show');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

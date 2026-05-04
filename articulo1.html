@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El arte de escuchar lo que no habla | Blog Pulso.Origen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="menu">
+        <div class="logo-texto">PULSO <span>·</span> ORIGEN</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#que-es">Qué es</a></li>
+            <li><a href="index.html#proceso">El Proceso</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+        <button class="menu-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+    </nav>
+
+    <main>
+        <article class="articulo-completo">
+            <div class="articulo-contenedor">
+                <span class="blog-fecha">15 abril, 2026</span>
+                <h1>El arte de escuchar lo que no habla</h1>
+                
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000" alt="Persona meditando en silencio" class="articulo-imagen">
+                
+                <div class="articulo-texto">
+                    <p>Hay una inteligencia que no utiliza palabras. No se expresa en conceptos, no se defiende con argumentos. Simplemente <strong>sabe</strong>. Y sin embargo, en el ruido cotidiano, rara vez le prestamos atención.</p>
+                    
+                    <p>Escuchar lo que no habla requiere un tipo de presencia diferente. No es analizar, no es interpretar. Es <strong>habitar el silencio</strong> el tiempo suficiente como para que lo que necesita ser visto emerja por sí mismo.</p>
+                    
+                    <h2>El cuerpo habla cuando la mente calla</h2>
+                    
+                    <p>Nuestro cuerpo guarda memoria de todo lo vivido. Cada tensión, cada nudo, cada respiración contenida es un eco de algo que no encontró palabras en su momento. Aprender a escuchar esas señales es el primer paso para liberar lo que ya no necesitamos cargar.</p>
+                    
+                    <p>En el acompañamiento terapéutico que propongo, el silencio no es un vacío. Es un <strong>espacio sagrado</strong> donde lo profundo puede finalmente emerger.</p>
+                    
+                    <h2>Pequeños rituales para escucharte</h2>
+                    
+                    <p>Antes de seguir leyendo, detente un momento. Respira. Pregúntate: <em>¿Qué siento ahora mismo en el cuerpo? ¿Hay alguna tensión? ¿Hay alguna emoción que no he nombrado?</em></p>
+                    
+                    <p>Eso que acabas de notar, aunque sea sutil, es tu interior queriendo ser escuchado.</p>
+                    
+                    <div class="articulo-cita">
+                        "No necesitas más información. Necesitas menos ruido y más presencia."
+                    </div>
+                    
+                    <p>Si este artículo resonó contigo, te invito a seguir explorando el blog o a contactarme para una conversación inicial. No hay compromiso. Solo la posibilidad de empezar a escucharte de otra manera.</p>
+                </div>
+                
+                <div class="articulo-footer">
+                    <a href="blog.html" class="boton-minimal">← Volver al blog</a>
+                    <a href="index.html#contacto" class="boton-negro">Solicitar conversación</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-logo">PULSO <span>·</span> ORIGEN</div>
+        <p>Transformación desde la raíz.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        }
+
+        const navLinksItems = document.querySelectorAll('.nav-links a');
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
