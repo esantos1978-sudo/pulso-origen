@@ -317,7 +317,7 @@ h2 {
 .atmo-franja {
     height: 60vh;
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2000') center/cover no-repeat fixed;
+        url('src/img/pulso.jpg') center/cover no-repeat fixed;
 }
 
 /* 7.5. SOBRE MÍ */
@@ -832,13 +832,13 @@ footer .logo-separador {
     section {
         padding: 80px 20px;
     }
-
+    /* La regla general ya funciona, no es necesario repetirla aquí 
     .atmo-franja {
         height: 60vh;
         background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-                url('src/img/pulso.jpg') center/cover no-repeat fixed;
-    }
-
+                url('src/img/Pulso.JPG') center/cover no-repeat fixed;
+    }*/
+    
     .sobremi-container {
         flex-direction: column;
         text-align: center;
