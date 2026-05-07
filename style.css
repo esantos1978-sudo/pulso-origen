@@ -509,8 +509,8 @@ footer {
 /* 12. BLOG HEADER */
 .blog-header {
     min-height: 50vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url('https://images.unsplash.com/photo-1441974231531-c622288db1a2?q=80&w=2000') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('src/img/blog-header.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -524,6 +524,12 @@ footer {
     font-size: clamp(2.5rem, 6vw, 4rem);
     color: #fff;
     margin-bottom: 10px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.blog-header .tagline {
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* 13. BLOG GRID */
@@ -828,8 +834,9 @@ footer .logo-separador {
     }
 
     .atmo-franja {
-        height: 40vh;
-        background-attachment: scroll;
+        height: 60vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                url('src/img/pulso.jpg') center/cover no-repeat fixed;
     }
 
     .sobremi-container {
