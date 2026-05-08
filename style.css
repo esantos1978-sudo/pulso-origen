@@ -244,8 +244,23 @@ h2 {
 }
 
 .seccion-clara {
-    background-color: var(--color-fondo-alt);
-    max-width: 100%;
+    background-color: #f2f0eb; /* Un tono arena/lino más cálido */
+    background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png'); /* Textura sutil */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Añadir un "destello" de luz orgánico */
+.seccion-clara::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(140, 146, 132, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
 }
 
 .lista-dolores {
@@ -819,15 +834,16 @@ footer .logo-separador {
         gap: 15px;
         width: 100%;
         margin: 0 auto;
+}
 
-        .hero-buttons .boton-minimal,
-        .hero-buttons .boton-negro {
-            width: 100%;
-            max-width: 280px;
-            text-align: center;
-            box-sizing: border-box;
-        }
-    }
+/* Esta regla va por separado, no anidada */
+    .hero-buttons .boton-minimal,
+    .hero-buttons .boton-negro {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        box-sizing: border-box;
+}
 
     section {
         padding: 80px 20px;
