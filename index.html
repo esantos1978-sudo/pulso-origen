@@ -255,82 +255,38 @@
     </footer>
 
     <script>
-    console.log("🚀 Pulso Origen: Script cargado correctamente");
+        // Espera a que todo el DOM cargue
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menú hamburguesa
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
 
-    // 1. MENÚ GLASSMORPHISM
-    const menu = document.querySelector('.menu');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            menu.classList.add('scrolled');
-        } else {
-            menu.classList.remove('scrolled');
-        }
-    });
-
-    // 2. EFECTO FADE-UP
-    const fadeElements = document.querySelectorAll('.fade-up');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.15 });
-
-    fadeElements.forEach(el => observer.observe(el));
-
-    // 3. MENÚ HAMBURGUESA (EL FIX)
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (menuToggle && navLinks) {
-        menuToggle.onclick = (e) => {
-            e.stopPropagation(); // Evita que el click se propague
-            navLinks.classList.toggle('show');
-            console.log("Menú móvil toggleado");
-        };
-
-        // Cerrar al clickar en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.onclick = () => navLinks.classList.remove('show');
-        });
-
-        // Cerrar si clickas fuera
-        document.onclick = (e) => {
-            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-                navLinks.classList.remove('show');
-            }
-        };
-    }
-
-    // 4. FORMULARIO FORMSPREE (CIERRES CORREGIDOS)
-    const formulario = document.getElementById('miFormulario');
-    const mensajeExito = document.getElementById('mensaje-exito');
-
-    if (formulario) {
-        formulario.addEventListener('submit', async function (e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-            
-            try {
-                const response = await fetch(this.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navLinks.classList.toggle('show');
+                    console.log('Menú toggled');
                 });
-                
-                if (response.ok) {
-                    formulario.style.display = 'none';
-                    mensajeExito.style.display = 'block';
-                    this.reset();
-                } else {
-                    alert('Error al enviar. Inténtalo de nuevo.');
-                }
-            } catch (error) {
-                alert('Error de conexión.');
+
+                // Cerrar al hacer clic en un enlace
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('show');
+                    });
+                });
+
+                // Cerrar si se clica fuera
+                document.addEventListener('click', (e) => {
+                    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                        navLinks.classList.remove('show');
+                    }
+                });
+            } else {
+                console.error('No se encontró .menu-toggle o .nav-links');
             }
-        }); // <-- Cierre de la función
-    } // <-- Cierre del if
+        });
     </script>
 </body>
+
 </html>
