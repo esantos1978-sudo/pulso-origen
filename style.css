@@ -455,38 +455,7 @@ h2 {
     gap: 8px;
 }
 
-/* 10. FORMULARIO */
-.formulario-seccion {
-    background-color: var(--color-fondo-alt);
-}
 
-.formulario-seccion input,
-.formulario-seccion textarea {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    font-family: var(--fuente-cuerpo);
-    transition: border-color 0.3s;
-}
-
-.formulario-seccion input:focus,
-.formulario-seccion textarea:focus {
-    outline: none;
-    border-color: #000;
-}
-
-.feedback-envio {
-    display: none;
-    padding: 50px;
-    background: #fff;
-    border: 1px solid #eee;
-    margin-top: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /* 11. FOOTER Y REDES SOCIALES */
 footer {
@@ -852,7 +821,7 @@ footer .logo-separador {
     .atmo-franja {
         height: 60vh;
         background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-                url('src/img/Pulso.JPG') center/cover no-repeat fixed;
+                url('src/img/pulso.jpg') center/cover no-repeat fixed;
     }*/
     
     .sobremi-container {
