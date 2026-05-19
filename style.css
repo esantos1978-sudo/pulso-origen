@@ -248,6 +248,7 @@ h2 {
     background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png'); /* Textura sutil */
     position: relative;
     overflow: hidden;
+    max-width: 100%;
 }
 
 /* Añadir un "destello" de luz orgánico */
@@ -297,7 +298,7 @@ h2 {
 .texto-seo {
     max-width: 850px;
     margin: 40px auto;
-    text-align: left;
+    text-align: center;
     font-size: 1.15rem;
 }
 
