@@ -7,6 +7,10 @@
     --fuente-titulos: 'Playfair Display', serif;
     --fuente-cuerpo: 'Lato', sans-serif;
     --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* Colores oficiales de redes sociales */
+    --color-instagram: #E4405F;
+    --color-whatsapp: #25D366;
+    --color-email: #666666;
 }
 
 * {
@@ -500,6 +504,22 @@ footer {
 .social-icons a:hover {
     color: #000;
     transform: translateY(-3px);
+}
+
+/* Colores oficiales de redes sociales en hover */
+.social-icons a[aria-label="Instagram"]:hover,
+.social-icons a[href*="instagram"]:hover {
+    color: var(--color-instagram);
+}
+
+.social-icons a[aria-label="WhatsApp"]:hover,
+.social-icons a[href*="wa.me"]:hover {
+    color: var(--color-whatsapp);
+}
+
+.social-icons a[aria-label="Email"]:hover,
+.social-icons a[href*="mailto"]:hover {
+    color: var(--color-email);
 }
 
 .copyright {
