@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gracias por contactar con Pulso Origen. Tu mensaje ha sido recibido. Pronto me pondré en contacto contigo.">
+    <meta name="theme-color" content="#ffffff">
+    <title>Gracias · Pulso Origen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="src/img/hero-origen.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=3">
+
+    <style>
+        /* ===== ESTILOS ESPECÍFICOS PARA LA PÁGINA DE GRACIAS ===== */
+        .gracias-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            background-color: #080808;
+            animation: fadeIn 1s ease-out;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .gracias-hero::before {
+            content: '';
+            position: absolute;
+            top: -100%; left: -100%; right: -100%; bottom: -100%;
+            background: repeating-conic-gradient(from 0deg, transparent 0%, rgba(248, 247, 245, 0.25) 10%, transparent 20%);
+            animation: rotate-spiral 40s linear infinite;
+            z-index: -2;
+            opacity: 0.5;
+        }
+
+        .gracias-hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, #080808 80%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .gracias-contenido {
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeUp 1.2s ease-out;
+            position: relative;
+            z-index: 2;
+        }
+
+        .gracias-contenido .icono-corazon {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            display: block;
+            opacity: 0.8;
+            animation: pulse-corazon 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-corazon {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+
+        .gracias-contenido h1 {
+            font-family: var(--fuente-titulos);
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .gracias-contenido .tagline-gracias {
+            font-family: var(--fuente-titulos);
+            font-style: italic;
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .gracias-contenido .mensaje-gracias {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: clamp(0.95rem, 3vw, 1.15rem);
+            opacity: 0.9;
+            line-height: 1.8;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .gracias-contenido .mensaje-gracias p {
+            margin-bottom: 15px;
+        }
+
+        .gracias-botones {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .gracias-botones .boton-minimal {
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            transition: 0.3s;
+            background: transparent;
+            display: inline-block;
+        }
+
+        .gracias-botones .boton-minimal:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .gracias-botones .boton-negro {
+            background: #fff;
+            color: #000;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            border: 1px solid #fff;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .gracias-botones .boton-negro:hover {
+            background: transparent;
+            color: #fff;
+        }
+
+        .gracias-contenido .detalle-sutil {
+            margin-top: 50px;
+            font-size: 0.75rem;
+            opacity: 0.5;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gracias-contenido h1 {
+                font-size: 2rem;
+                letter-spacing: 4px;
+            }
+
+            .gracias-botones {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gracias-botones .boton-minimal,
+            .gracias-botones .boton-negro {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="menu">
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <div class="logo-linea" style="letter-spacing: 0.2em;">
+                    <span class="logo-parte">PULSO</span>
+                    <div class="venn-logo" style="display: inline-block; width: 46px; height: 26px; margin: 0 1px; position: relative; top: -1px;">
+                        <svg viewBox="0 0 50 30" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; display: block;">
+                            <circle cx="17" cy="15" r="13" fill="none" stroke="currentColor" stroke-width="1.2" />
+                            <circle cx="33" cy="15" r="13" fill="none" stroke="currentColor" stroke-width="1.2" />
+                            <circle cx="25" cy="15" r="1.5" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <span class="logo-parte">ORIGEN</span>
+                </div>
+                <span class="lema">el latido que te conecta con tu esencia</span>
+            </a>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#que-es">Qué es</a></li>
+            <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="gracias-hero">
+            <div class="gracias-contenido">
+                <span class="icono-corazon">✦</span>
+                <h1>Gracias</h1>
+                <p class="tagline-gracias">Tu interior ya sabe el camino.</p>
+                <div class="mensaje-gracias">
+                    <p>He recibido tu mensaje. En breve me pondré en contacto contigo para conversar sobre cómo puedo acompañarte en este proceso.</p>
+                    <p>Mientras tanto, respira. Ya has dado el paso más importante: escucharte.</p>
+                </div>
+                <div class="gracias-botones">
+                    <a href="index.html" class="boton-minimal">Volver al inicio</a>
+                    <a href="blog.html" class="boton-negro">Explorar el blog</a>
+                </div>
+                <p class="detalle-sutil">Conecta con tu esencia · Pulso Origen</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <div class="logo-linea" style="letter-spacing: 0.2em;">
+                    <span class="logo-parte">PULSO</span>
+                    <div class="venn-logo" style="display: inline-block; width: 46px; height: 26px; margin: 0 1px; position: relative; top: -1px;">
+                        <svg viewBox="0 0 50 30" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; display: block;">
+                            <circle cx="17" cy="15" r="13" fill="none" stroke="currentColor" stroke-width="1.2" />
+                            <circle cx="33" cy="15" r="13" fill="none" stroke="currentColor" stroke-width="1.2" />
+                            <circle cx="25" cy="15" r="1.5" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <span class="logo-parte">ORIGEN</span>
+                </div>
+                <span class="lema">el latido que te conecta con tu esencia</span>
+            </a>
+        </div>
+        <p>Acompañamiento terapéutico para volver a ti.</p>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/pulso.origen" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/34612345678" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:hola@pulsoorigen.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+        </div>
+
+        <div class="copyright">© 2026 Pulso Origen. Todos los derechos reservados.</div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
