@@ -977,3 +977,138 @@ footer .logo-separador {
         min-width: auto;
     }
 }
+
+/* 16. BANNER DE COOKIES (CONSENT MODE V2) */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.05);
+    padding: 20px 5%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+}
+
+.cookie-banner.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.cookie-banner-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.cookie-banner-texto {
+    flex: 1;
+    min-width: 260px;
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--color-texto);
+    text-align: left;
+}
+
+.cookie-banner-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.cookie-banner-enlace {
+    color: #666;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.cookie-banner-enlace:hover {
+    color: #000;
+}
+
+/* Botones del banner: mismos tokens que .boton-negro / .boton-minimal */
+.cookie-boton {
+    font-family: var(--fuente-cuerpo);
+    padding: 18px 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    background: transparent;
+    color: var(--color-texto);
+    border: 1px solid #ddd;
+}
+
+.cookie-boton:hover {
+    border-color: #000;
+    color: #000;
+}
+
+.cookie-boton-aceptar {
+    background: var(--color-primario);
+    color: #fff;
+    border-color: var(--color-primario);
+}
+
+.cookie-boton-aceptar:hover {
+    background: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+/* Evita que el banner fijo tape el final de la página */
+body.cookie-banner-abierto {
+    padding-bottom: 140px;
+}
+
+@media (max-width: 768px) {
+    .cookie-banner {
+        padding: 18px 20px;
+    }
+
+    .cookie-banner-contenido {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .cookie-banner-acciones {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .cookie-boton {
+        width: 100%;
+    }
+
+    .cookie-banner-enlace {
+        text-align: center;
+        order: 3;
+    }
+
+    body.cookie-banner-abierto {
+        padding-bottom: 300px;
+    }
+}
