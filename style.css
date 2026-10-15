@@ -622,6 +622,11 @@ footer {
     margin-left: 5px;
 }
 
+.blog-card video {
+    display: block;
+    margin-bottom: 20px;
+}
+
 /* 14. ARTÍCULO COMPLETO */
 .articulo-completo {
     padding: 60px 5%;

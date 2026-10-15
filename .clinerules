@@ -1,0 +1,25 @@
+# Reglas del Proyecto "Pulso Origen" para Cline
+
+## Stack Tecnológico
+- HTML5 semántico.
+- CSS3 personalizado (style.css) con efectos de glassmorphism y animaciones CSS puras.
+- JavaScript vanilla (main.js) para interactividad básica.
+- NO se usan frameworks (No React, No Tailwind, No Node.js build tools).
+
+## Estructura de Contenido
+- Las páginas son archivos HTML estáticos independientes en la raíz (ej: `index.html`, `sobre-mi.html`, `blog.html`).
+- Los artículos del blog son archivos HTML individuales en la raíz con el formato `articulo-[tema].html`.
+- Las imágenes se almacenan exclusivamente en `src/img/`.
+
+## Reglas de SEO (OBLIGATORIO)
+1. **Title Tag**: El `<title>` debe ser exactamente: "[Título SEO proporcionado] | Pulso Origen".
+2. **Meta Description**: Incluir siempre `<meta name="description" content="[Meta descripción proporcionada]">` en el `<head>`.
+3. **Jerarquía de Encabezados**: Solo debe haber un `<h1>` por página (el título del artículo). Los subtítulos del texto deben ser `<h2>`.
+4. **Palabras Clave**: Asegurar que la palabra clave principal aparezca de forma natural en el primer párrafo y en algún `<h2>`.
+
+## Reglas de Oro de Desarrollo
+1. **Consistencia Visual**: Antes de crear o modificar cualquier HTML, DEBES leer `articulo-pulso-origen.html` (como referencia maestra) y `style.css` para copiar exactamente la estructura del `<head>`, la navegación, las clases del contenedor y el footer.
+2. **Rutas Relativas**: Usa siempre rutas relativas correctas (ej: `src/img/nombre-imagen.jpg`, `style.css`, `main.js`).
+3. **No Inventar Clases**: Reutiliza las clases CSS existentes en `style.css`. No añadas nuevas clases ni estilos en línea (`style="..."`) a menos que se te pida explícitamente.
+4. **Plan Primero**: Antes de escribir o modificar código, presenta un plan de acción breve (máximo 4 pasos) y espera mi confirmación con un "OK" o "Adelante".
+5. **Actualización de Enlaces**: Si creas un nuevo artículo, recuérdame al final que debemos añadir su enlace en `blog.html`.
