@@ -4,6 +4,8 @@
     --color-fondo-alt: #f8f7f5;
     --color-primario: #000000;
     --color-texto: #333333;
+    --color-texto-principal: #000000;
+    --color-texto-suave: #666666;
     --fuente-titulos: 'Playfair Display', serif;
     --fuente-cuerpo: 'Lato', sans-serif;
     --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -1110,5 +1112,141 @@ body.cookie-banner-abierto {
 
     body.cookie-banner-abierto {
         padding-bottom: 300px;
+    }
+}
+
+/* 17. HISTORIAS DE TRANSFORMACIÓN (TESTIMONIOS) */
+.testimonios-section {
+    padding: 100px 0;
+    max-width: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.02) 100%);
+}
+
+.testimonios-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.testimonios-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonios-section .tagline {
+    text-align: center;
+    font-style: italic;
+    color: var(--color-texto-suave);
+    margin-bottom: 60px;
+    font-size: 1.1rem;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonio-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.testimonio-card h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--color-texto-principal);
+}
+
+.testimonio-extracto {
+    font-style: italic;
+    color: var(--color-texto-suave);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.testimonio-autor-card {
+    font-weight: bold;
+    color: var(--color-texto-principal);
+    margin-bottom: 20px;
+}
+
+/* El botón global es blanco: sobre las tarjetas claras necesita contraste */
+.testimonio-card .boton-minimal {
+    align-self: center;
+    padding: 14px 28px;
+    border-color: #ddd;
+    color: #000;
+}
+
+.testimonio-card .boton-minimal:hover {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+/* Estilos para páginas individuales de testimonios */
+.testimonio-autor {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-texto-suave);
+    margin-top: -20px;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.testimonio-cierre {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.testimonio-cierre h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonio-cierre p {
+    margin-bottom: 30px;
+}
+
+.testimonio-cierre .boton-minimal {
+    border-color: #ddd;
+    color: #000;
+    margin-top: 20px;
+}
+
+.testimonio-cierre .boton-minimal:hover {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .testimonios-section {
+        padding: 70px 0;
+    }
+
+    .testimonios-grid {
+        grid-template-columns: 1fr;
     }
 }
