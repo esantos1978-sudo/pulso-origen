@@ -1,0 +1,7 @@
+# robots.txt - Pulso Origen
+# Sitio estatico alojado en https://www.pulsoorigen.com/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.pulsoorigen.com/sitemap.xml

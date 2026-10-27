@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Pagina principal -->
+    <url>
+        <loc>https://www.pulsoorigen.com/</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Paginas principales -->
+    <url>
+        <loc>https://www.pulsoorigen.com/sobre-mi.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/blog.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/videos.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/faq.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Articulos del blog -->
+    <url>
+        <loc>https://www.pulsoorigen.com/articulo-pulso-origen.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/articulo-apego.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/articulo-patrones.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/articulo-despertar.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/articulo-reconectar.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/articulo-vacio-existencial.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/articulo-agotamiento-emocional.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/articulo-perderte-para-encontrarte.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/articulo-vivimos-como-siempre.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Historias de transformacion -->
+    <url>
+        <loc>https://www.pulsoorigen.com/testimonio-pilar.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/testimonio-isa.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pulsoorigen.com/testimonio-iris.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Pagina de confirmacion: sin valor de descubrimiento organico -->
+    <url>
+        <loc>https://www.pulsoorigen.com/gracias.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.1</priority>
+    </url>
+
+</urlset>
