@@ -42,35 +42,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (formulario) {
         formulario.addEventListener('submit', function(e) {
-            e.preventDefault();
-
             const nombre = document.getElementById('nombre').value.trim();
             const email = document.getElementById('email').value.trim();
             const mensaje = document.getElementById('mensaje').value.trim();
 
+            // Validación propia: solo se cancela el envío si falta algún campo
             if (!nombre || !email || !mensaje) {
+                e.preventDefault();
                 alert('Por favor, completa todos los campos.');
                 return;
             }
 
-            // Cambiar el botón mientras se envía
+            // Si la validación pasa, NO se llama a preventDefault():
+            // el navegador hace el POST a FormSubmit y FormSubmit redirige a _next.
             const boton = formulario.querySelector('button[type="submit"]');
-            const textoOriginal = boton.textContent;
-            boton.textContent = 'Enviando...';
-            boton.disabled = true;
 
-            // Construir el cuerpo del correo con formato
-            const cuerpoCorreo = `Nombre: ${nombre}%0D%0AEmail: ${email}%0D%0A%0D%0AMensaje:%0D%0A${mensaje}`;
-
-            // Abrir el cliente de correo del usuario
-            window.location.href = `mailto:hola@pulsoorigen.com?subject=Nuevo mensaje desde Pulso Origen - ${encodeURIComponent(nombre)}&body=${cuerpoCorreo}`;
-
-            // Restaurar el botón
-            boton.textContent = textoOriginal;
-            boton.disabled = false;
-
-            // Redirigir a la página de agradecimiento
-            window.location.href = 'gracias.html';
+            // Se aplaza el cambio de estado para no interferir con el envío nativo
+            setTimeout(function() {
+                if (boton) {
+                    boton.textContent = 'Enviando...';
+                    boton.disabled = true;
+                }
+            }, 0);
         });
     }
 
