@@ -1436,3 +1436,10 @@ body.cookie-banner-abierto {
         margin-bottom: 35px;
     }
 }
+
+/* 19. HERO DE LA PÁGINA VIDEOS */
+.blog-header.hero-videos {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
+                url('src/img/hero_videos.jpg') center/cover no-repeat #080808;
+}
+
