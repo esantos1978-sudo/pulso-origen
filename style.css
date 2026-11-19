@@ -1443,3 +1443,203 @@ body.cookie-banner-abierto {
                 url('src/img/hero_videos.jpg') center/cover no-repeat #080808;
 }
 
+/* 20. CUADERNO DE BITÁCORA (EN BLOG) */
+.bitacora-section {
+    padding: 60px 0;
+    max-width: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.02) 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bitacora-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bitacora-section h2 {
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    margin-bottom: 15px;
+}
+
+.bitacora-intro {
+    text-align: center;
+    font-style: italic;
+    color: var(--color-texto-suave);
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bitacora-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.bitacora-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.bitacora-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.badge-bitacora {
+    position: absolute;
+    top: -12px;
+    left: 30px;
+    background: var(--color-texto-principal);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.bitacora-card h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.3rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: var(--color-texto-principal);
+}
+
+.bitacora-extracto {
+    color: var(--color-texto-suave);
+    line-height: 1.7;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* El botón hereda .boton-minimal (pensado para fondos oscuros):
+   sobre la tarjeta clara se invierten los colores. */
+.bitacora-card .boton-minimal {
+    align-self: flex-start;
+    color: var(--color-texto-principal);
+    border-color: #ddd;
+    padding: 12px 24px;
+}
+
+.bitacora-card .boton-minimal:hover {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .bitacora-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* 20.1. MAQUETACIÓN DEL ARTÍCULO DE BITÁCORA */
+.articulo-subtitulo {
+    font-family: var(--fuente-titulos);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--color-texto-suave);
+    margin-bottom: 30px;
+}
+
+.articulo-texto h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin: 45px 0 18px;
+    color: var(--color-texto-principal);
+}
+
+.articulo-cita p {
+    margin-bottom: 12px;
+}
+
+.articulo-cita p:last-child {
+    margin-bottom: 0;
+    font-family: var(--fuente-cuerpo);
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--color-texto-suave);
+}
+
+.articulo-firma {
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    color: var(--color-texto-principal);
+    margin-top: 40px;
+}
+
+.articulo-firma strong {
+    display: inline-block;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+}
+
+.articulo-firma em {
+    font-size: 1rem;
+    color: var(--color-texto-suave);
+}
+
+.articulo-cta {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 45px;
+    border-top: 1px solid #eee;
+}
+
+.articulo-cta h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.articulo-cta p {
+    color: var(--color-texto-suave);
+    margin-bottom: 25px;
+}
+
+.articulo-cta + .articulo-footer {
+    justify-content: center;
+    margin-top: 30px;
+    padding-top: 0;
+    border-top: none;
+}
+
+.articulo-footer .boton-minimal {
+    color: var(--color-texto-principal);
+    border-color: #ddd;
+}
+
+.articulo-footer .boton-minimal:hover {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .articulo-texto h3 {
+        font-size: 1.15rem;
+        margin-top: 35px;
+    }
+
+    .articulo-cta h2 {
+        font-size: 1.5rem;
+    }
+}
+
