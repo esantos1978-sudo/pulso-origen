@@ -569,6 +569,13 @@ footer {
     margin: 0 auto;
 }
 
+/* 13.1. POST DESTACADO (FUERA DEL GRID) */
+.blog-destacado {
+    padding: 80px 5% 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
